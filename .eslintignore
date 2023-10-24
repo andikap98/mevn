@@ -1,0 +1,24 @@
+.eslintrc
+    {
+        "root": true,
+        "parser": "@typescript-eslint/parser",
+        "overrides" : [
+            {
+                "files": ["*.ts"]
+                "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+                "parserOptions": {"poject": ["./tsconfig.json"]}
+            }
+        ],
+        "plugins": ["@typescript-eslint"],
+        "rule" : {
+            "@typescript-eslint/strict-boolean-expresions": [
+            2,
+            {
+                "allowString" : false,
+                "allowNumber" : flase,
+            }
+        },
+        "ignorePattern": ["*!.*","dist", "build", "node_modules"]
+        
+
+    }
